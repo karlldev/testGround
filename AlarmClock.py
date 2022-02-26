@@ -27,10 +27,10 @@ def actual_time():
 #GUI
 clock = Tk()
 clock.title(r'AlarmClock project')
-clock.geometry(r'800x400')
-time_format = Label(clock, text = r'Enter time in 24 hour format!').place(x = 60, y = 120)
-addTime = Label(clock, text = r'Hour Min Sec', font = 60).place(x = 110)
-setYourAlarm = Label(clock, text = r'When to wake uou up', fg = r'blue', relief = r'solid', font = (r'Helvetica', 7, r'bold')).place(x = 0, y = 29)
+clock.geometry(r'600x300')
+time_format = Label(clock, text = r'Enter time in 24 hour format!').place(x = 10)
+addTime = Label(clock, text = r'Hour Min Sec').place(x = 210)
+setYourAlarm = Label(clock, text = r'When to wake you up', fg = r'blue', relief = r'solid').place(x = 90)
 
 hour = StringVar()
 min = StringVar()
@@ -38,7 +38,7 @@ sec = StringVar()
 
 hourTime = Entry(clock, textvariable = hour, bg = r'pink', width = 15).place(x = 110, y = 30)
 minTime = Entry(clock, textvariable = min, bg = r'pink', width = 15).place(x = 150, y = 30)
-secTime = Entry(clock, textvariable = sec, bg = r'pink', width = 15).place(x = 200, y = 30)
+secTime = Entry(clock, textvariable = sec, bg = r'pink', width = 10).place(x = 200, y = 30)
 
 submit = Button(clock, text = r'Set Alarm', fg = r'red', width = 10, command = actual_time).place(x = 110, y = 70)
 
